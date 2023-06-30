@@ -42,6 +42,7 @@ body {
 .logo {
     width: 100%;
     min-width: 75px;
+    text-align: center;
 }
 
 .logo img {
