@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+:root {
+    --main-bkg: #e7e8e8;
+    --main-color: #07575b;
+    --main-color-text: #c4dfe6;
+    --main-color-active: #003b46;
+    --main-color-active-text: #66a5ad;
+}
+
+html {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--main-color-text);
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+}
+
+/* Fixed sidenav, full height */
+.sidenav {
+    grid-column: 1 / 2;
+    height: 100%;
+    min-width: 75px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: var(--main-color);
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.logo {
+    width: 100%;
+    min-width: 75px;
+}
+
+.logo img {
+    width: 3.5vw;
+    min-width: 44px;
+    margin: .70rem;
+}
+
+.logo h1 {
+    font-size: 1.5vw;
+    margin: .70em;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a,
+.dropdown-btn {
+    color: var(--main-color-text);
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    border: none;
+    background: none;
+    width: 10vw;
+    min-width: 75px;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+}
+
+/* On mouse-over */
+.sidenav a:hover,
+.dropdown-btn:hover {
+    color: var(--main-color-active-text);
+}
+
+/* Main content */
+.main {
+    grid-column: 2 / 3;
+    margin-left: 200px;
+    /* Same as the width of the sidenav */
+    font-size: 20px;
+    /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+    background-color: green;
+    color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+    display: none;
+    background-color: #262626;
+    padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+    float: right;
+    padding-right: 8px;
+}
+
+/* Some media queries for responsiveness */
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}
