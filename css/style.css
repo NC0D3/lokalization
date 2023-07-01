@@ -6,10 +6,11 @@
     --main-color-text: #c4dfe6;
     --main-color-active: #003b46;
     --main-color-active-text: #66a5ad;
+    --main-font: 'Nunito', sans-serif;
 }
 
 html {
-    font-family: 'Nunito', sans-serif;
+    font-family: var(--main-font);
     margin: 0;
     padding: 0;
     color: var(--main-color-text);
@@ -22,7 +23,7 @@ body {
     padding: 0;
     position: absolute;
     display: grid;
-    grid-template-columns: minmax(75px, 1fr) 9fr;
+    grid-template-columns: minmax(75px, 11fr) 89fr;
 }
 
 /* Fixed sidenav, full height */
@@ -30,20 +31,21 @@ body {
     grid-column: 1 / 2;
     height: 100%;
     min-width: 75px;
-    width: 10vw;
+    width: 11vw;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
     background-color: var(--main-color);
     overflow-x: hidden;
-    padding-top: 20px;
+    text-align: center;
 }
 
 .logo {
     width: 100%;
     min-width: 75px;
     text-align: center;
+
 }
 
 .logo img {
@@ -64,6 +66,7 @@ body {
 /* Style the sidenav links and the dropdown button */
 .sidenav a,
 .dropdown-btn {
+    font-family: var(--main-font);
     color: var(--main-color-text);
     text-decoration: none;
     font-size: 1.5vw;
@@ -88,11 +91,24 @@ body {
     color: var(--main-color-active-text);
 }
 
+.sidenav hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, .15);
+    margin: 0 1rem 1rem;
+}
+
 /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
-.dropdown-container {
+.dropdown-container{
     display: none;
-    background-color: #262626;
+    background-color: var(--main-color-active);
     padding-left: 8px;
+}
+
+.dropdown-container a{
+    font-family: var(--main-font);
 }
 
 /* Optional: Style the caret down icon */
@@ -115,6 +131,13 @@ body {
 
 .main h2{
     margin: auto 0;
+    grid-column: 1 / 3;
+    text-align: center;
+}
+
+.main .graphic{
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
 }
 
 
@@ -122,6 +145,17 @@ body {
 @media screen and (max-height: 450px) {
     .sidenav {
         padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .logo h1 {
+        display: none;
+    
     }
 
     .sidenav a {
