@@ -83,8 +83,8 @@ body {
 }
 
 .active {
-    background-color: green;
-    color: white;
+    background-color: var(--main-color-active);
+    color: var(--main-color-active-text);
 }
 
 /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
