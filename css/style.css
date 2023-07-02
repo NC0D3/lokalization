@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
-
+/*configuracion base*/
 :root {
     --main-bkg: #e7e8e8;
     --main-color: #07575b;
@@ -7,6 +7,7 @@
     --main-color-active: #003b46;
     --main-color-active-text: #66a5ad;
     --main-font: 'Nunito', sans-serif;
+    --min-width: 104px;
 }
 
 html {
@@ -23,14 +24,14 @@ body {
     padding: 0;
     position: absolute;
     display: grid;
-    grid-template-columns: minmax(75px, 11fr) 89fr;
+    grid-template-columns: minmax(var(--min-width), 11fr) 89fr;
 }
 
-/* Fixed sidenav, full height */
+/*configuracion del menu lateral*/
 .sidenav {
     grid-column: 1 / 2;
     height: 100%;
-    min-width: 75px;
+    min-width: var(--min-width);
     width: 11vw;
     position: fixed;
     z-index: 1;
@@ -43,7 +44,7 @@ body {
 
 .logo {
     width: 100%;
-    min-width: 75px;
+    min-width: var(--min-width);
     text-align: center;
 
 }
@@ -51,11 +52,11 @@ body {
 .logo img {
     width: 3.5vw;
     min-width: 44px;
-    margin: .70rem;
+    margin-top: .7rem;
 }
 
 .logo h1 {
-    font-size: 1.5vw;
+    font-size: 1vw;
     margin: .70em;
     position: relative;
     z-index: 1;
@@ -63,24 +64,43 @@ body {
 
 }
 
-/* Style the sidenav links and the dropdown button */
+.sidenav hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, .15);
+    margin: .3rem .5rem .3rem;
+}
+
+/*configuracion de los menus*/
 .sidenav a,
 .dropdown-btn {
     font-family: var(--main-font);
     color: var(--main-color-text);
     text-decoration: none;
-    font-size: 1.5vw;
+    font-size: .85rem;
     display: block;
     border: none;
     background: none;
     width: 11vw;
-    min-width: 75px;
+    min-width: var(--min-width);
     text-align: left;
     cursor: pointer;
     outline: none;
 }
 
-/* On mouse-over */
+.dropdown-btn{
+    display: flex;
+    justify-content: space-between;
+}
+
+.fa-caret-down {
+    float: right;
+    padding-right: 8px;
+}
+
+/* hover de la sidebar */
 .sidenav a:hover,
 .dropdown-btn:hover {
     color: var(--main-color-active-text);
@@ -91,30 +111,17 @@ body {
     color: var(--main-color-active-text);
 }
 
-.sidenav hr {
-    box-sizing: content-box;
-    height: 0;
-    overflow: visible;
-    border: 0;
-    border-top: 1px solid rgba(255, 255, 255, .15);
-    margin: 0 1rem 1rem;
-}
 
 /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
 .dropdown-container{
     display: none;
     background-color: var(--main-color-active);
-    padding-left: 8px;
 }
 
 .dropdown-container a{
     font-family: var(--main-font);
-}
-
-/* Optional: Style the caret down icon */
-.fa-caret-down {
-    float: right;
-    padding-right: 8px;
+    display: flex;
+    justify-content: space-around;
 }
 
 /* Main content */
@@ -161,4 +168,18 @@ body {
     .sidenav a {
         font-size: 18px;
     }
+
+    .logo img {
+        margin-bottom: .7rem;
+    }
+    .sidenav hr {
+        min-width: 50px;
+        margin: .3rem 8% .3rem;
+    }
+
+    .sidenav a,
+    .dropdown-btn {
+    font-size:.65rem;
+    }
+
 }
