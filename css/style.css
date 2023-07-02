@@ -90,7 +90,6 @@ body {
     outline: none;
 }
 
-
 .dropdown-btn{
     display: flex;
     justify-content: space-between;
@@ -113,18 +112,49 @@ body {
 }
 
 
-/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+/* contenedor del submenu */
+.dropdown-container .sidebar-header{
+    margin-left: .67rem;
+    color: var(--main-color-active-text);
+    font-size: .85rem;
+    display: flex;
+    justify-content:start;
+}
+
 .dropdown-container{
     display: none;
     background-color: var(--main-color-active);
+    height: fit-content;
 }
 
 .dropdown-container a{
-    font-family: var(--main-font);
+    font-size: .95rem;
     display: flex;
     justify-content: space-around;
 }
 
+.dropdown-container form{
+    margin: .4rem 0;
+}
+
+.dropdown-container form div{
+    display: flex;
+    justify-content: space-evenly;
+    margin: .4rem 0;
+}
+
+.dropdown-container label{
+    font-size: .95rem;
+}
+
+.dropdown-container input{
+    border: 0;
+    padding: 0;
+    margin: 0;
+    width: 70%;
+    background-color: rgba(255, 255, 255, .4);
+    font-family: var(--main-font);
+}
 /* Main content */
 .main {
     height: 100vh;
@@ -160,6 +190,7 @@ body {
     }
 }
 
+
 @media screen and (max-width: 900px) {
     .logo h1 {
         display: none;
@@ -180,7 +211,12 @@ body {
 
     .sidenav a,
     .dropdown-btn {
-    font-size:.65rem;
+    font-size:.75rem;
+    }
+
+    .dropdown-container .sidebar-header, .dropdown-container label
+    {
+        font-size: .75rem;
     }
 
 }
