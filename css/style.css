@@ -73,7 +73,7 @@ body {
     margin: .3rem .5rem .3rem;
 }
 
-/*configuracion de los menus*/
+/*configuracion de los botones-menu*/
 .sidenav a,
 .dropdown-btn {
     font-family: var(--main-font);
@@ -104,10 +104,11 @@ body {
 .sidenav a:hover,
 .dropdown-btn:hover {
     color: var(--main-color-active-text);
+    background-color: var(--main-color-active);
 }
 
 .active {
-    background-color: var(--main-color-active);
+    background-color: var(--main-color);
     color: var(--main-color-active-text);
 }
 
@@ -123,18 +124,28 @@ body {
 
 .dropdown-container{
     display: none;
-    background-color: var(--main-color-active);
+    background-color: var(--main-color);
     height: fit-content;
+    justify-content: center;
 }
 
 .dropdown-container a{
     font-size: .95rem;
     display: flex;
     justify-content: space-around;
+    padding: .3rem 0;
 }
 
 .dropdown-container form{
     margin: .4rem 0;
+}
+
+.dropdown-container .spacer{
+    height: 3px;
+}
+
+.dropdown-container .sensor:hover{
+    background-color: var(--main-color-active);
 }
 
 .dropdown-container form div{
@@ -151,9 +162,23 @@ body {
     border: 0;
     padding: 0;
     margin: 0;
-    width: 70%;
+    width: 50%;
     background-color: rgba(255, 255, 255, .4);
     font-family: var(--main-font);
+}
+
+.dropdown-container .btn{
+    background-color: var(--main-color-active);
+    color: var(--main-color-text);
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: 90%;
+    justify-content: space-evenly;
+}
+
+.dropdown-container .btn i{
+    margin: .3rem;
 }
 /* Main content */
 .main {
