@@ -213,6 +213,9 @@ body {
 .main .graphic{
     grid-column: 1 / 4;
     grid-row: 2 / 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .main .coord{
