@@ -93,6 +93,7 @@ body {
 .dropdown-btn{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .fa-caret-down {
@@ -130,7 +131,7 @@ body {
 }
 
 .dropdown-container a{
-    font-size: .95rem;
+    font-size: .85rem;
     display: flex;
     justify-content: space-around;
     padding: .3rem 0;
@@ -155,7 +156,7 @@ body {
 }
 
 .dropdown-container label{
-    font-size: .95rem;
+    font-size: .85rem;
 }
 
 .dropdown-container input{
