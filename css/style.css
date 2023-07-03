@@ -108,8 +108,13 @@ body {
     background-color: var(--main-color-active);
 }
 
-.active {
+.active-nav{
     background-color: var(--main-color);
+    color: var(--main-color-active-text);
+}
+
+.selected{
+    background-color: var(--main-color-active);
     color: var(--main-color-active-text);
 }
 
