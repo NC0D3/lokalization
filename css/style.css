@@ -166,6 +166,7 @@ body {
     width: 50%;
     background-color: rgba(255, 255, 255, .4);
     font-family: var(--main-font);
+    color: var(--main-color-text);
 }
 
 .dropdown-container .btn{
@@ -176,6 +177,13 @@ body {
     margin: 0;
     width: 90%;
     justify-content: space-evenly;
+    font-family: var(--main-font);
+    cursor: pointer;
+    opacity: 70%;
+}
+
+.dropdown-container .btn:hover{
+    opacity: 100%;
 }
 
 .dropdown-container .btn i{
@@ -244,5 +252,7 @@ body {
     {
         font-size: .75rem;
     }
+
+    
 
 }
