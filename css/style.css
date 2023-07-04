@@ -118,7 +118,6 @@ body {
     color: var(--main-color-active-text);
 }
 
-
 /* contenedor del submenu */
 .dropdown-container .sidebar-header{
     margin-left: .67rem;
@@ -194,7 +193,6 @@ body {
 .dropdown-container .btn i{
     margin: .3rem;
 }
-
 
 
 /* Main content */

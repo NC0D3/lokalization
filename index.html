@@ -29,27 +29,113 @@
             <i class="fa fa-gears"></i>Ajustes<i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-container">
-            <p>
-                <label for="mail">
-                  <Span>X</Span>
-                  <strong><abbr title="required">:</abbr></strong>
-                </label>
-                <input type="email" id="mail" name="usermail">
-              </p>
-              <p>
-                <label for="mail">
-                  <Span>Y</Span>
-                  <strong><abbr title="required">:</abbr></strong>
-                </label>
-                <input type="email" id="mail" name="usermail">
-              </p>
-              <p>
-                <label for="mail">
-                  <Span>Z</Span>
-                  <strong><abbr title="required">:</abbr></strong>
-                </label>
-                <input type="email" id="mail" name="usermail">
-              </p>
+            <div class="sensor">
+                <div class="spacer"></div>
+                <div class="sidebar-header">Sensor 1</div>
+                <form>
+                    <div>
+                        <label for="mail">
+                            <Span>X:</Span>
+                        </label>
+                        <input type="email" id="mail" name="usermail">
+                    </div>
+                    <div>
+                        <label for="mail">
+                            <Span>Y:</Span>
+                        </label>
+                        <input type="email" id="mail" name="usermail">
+                    </div>
+                    <div>
+                        <label for="mail">
+                            <Span>Z:</Span>
+                        </label>
+                        <input type="email" id="mail" name="usermail">
+                    </div>
+                </form>
+                <div class="spacer"></div>
+            </div>
+            <div class="sensor">
+                <div class="spacer"></div>
+                <div class="sidebar-header">Sensor 2</div>
+                <form>
+                    <div>
+                        <label for="mail">
+                            <Span>X:</Span>
+                        </label>
+                        <input type="email" id="mail" name="usermail">
+                    </div>
+                    <div>
+                        <label for="mail">
+                            <Span>Y:</Span>
+                        </label>
+                        <input type="email" id="mail" name="usermail">
+                    </div>
+                    <div>
+                        <label for="mail">
+                            <Span>Z:</Span>
+                        </label>
+                        <input type="email" id="mail" name="usermail">
+                    </div>
+                </form>
+                <div class="spacer"></div>
+            </div>
+            <div class="sensor">
+                <div class="spacer"></div>
+                <div class="sidebar-header">Sensor 3</div>
+                <form>
+                    <div>
+                        <label for="mail">
+                            <Span>X:</Span>
+                        </label>
+                        <input type="email" id="mail" name="usermail">
+                    </div>
+                    <div>
+                        <label for="mail">
+                            <Span>Y:</Span>
+                        </label>
+                        <input type="email" id="mail" name="usermail">
+                    </div>
+                    <div>
+                        <label for="mail">
+                            <Span>Z:</Span>
+                        </label>
+                        <input type="email" id="mail" name="usermail">
+                    </div>
+                </form>
+                <div class="spacer"></div>
+            </div>
+            <div class="sensor">
+                <div class="spacer"></div>
+                <div class="sidebar-header">Sensor 4</div>
+                <form>
+                    <div>
+                        <label for="mail">
+                            <Span>X:</Span>
+                        </label>
+                        <input type="email" id="mail" name="usermail">
+                    </div>
+                    <div>
+                        <label for="mail">
+                            <Span>Y:</Span>
+                        </label>
+                        <input type="email" id="mail" name="usermail">
+                    </div>
+                    <div>
+                        <label for="mail">
+                            <Span>Z:</Span>
+                        </label>
+                        <input type="email" id="mail" name="usermail">
+                    </div>
+                </form>
+                <div class="spacer"></div>
+            </div>
+            <div class="spacer"></div>
+            <button class="btn">
+                <div class="spacer"></div>
+                <i class="fa fa-refresh"></i>Actualizar
+                <div class="spacer"></div>
+            </button>
+            <div class="spacer"></div>
         </div>
         <hr>
     </div>
@@ -82,19 +168,26 @@
 
     <script>
         TESTER = document.getElementById('graph');
-        Plotly.newPlot(TESTER, [{
-            x: [0, 7.507, 0],
-            y: [0, 0, 3.94],
-            z: [0,0,0],
-            type: 'scatter3d',
-            mode: 'markers+text',
-            text: ['B-0', 'B-1', 'B-2'],
-            textposition: 'top center',
-            textfont: {
-                family: 'Raleway, sans-serif'
+        Plotly.newPlot(TESTER,
+            [{
+                x: [0, 7.507, 0],
+                y: [0, 0, 3.94],
+                z: [0, 0, 0],
+                type: 'scatter3d',
+                mode: 'markers+text',
+                text: ['B-0', 'B-1', 'B-2'],
+                textposition: 'top center',
+                textfont: {
+                    family: 'Raleway, sans-serif'
+                },
+                marker: { size: 12 }
+            }],
+            {
+                margin: { t: 0 }
             },
-            marker: { size: 12 }
-        }], { margin: { t: 0 } }, { responsive: true });
+            {
+                responsive: true
+            });
 
 
     </script>
