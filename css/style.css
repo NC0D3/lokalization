@@ -101,7 +101,22 @@ body {
     padding-right: 8px;
 }
 
-.switch-btn{
+.switch{
+    position: relative;
+}
+
+.switch input{
+    margin: 0;
+    position: absolute;
+    opacity: 0;
+    display: block;
+    width: 100%;
+    height: 2.5rem;
+    display: flex;
+    cursor: pointer;
+}
+
+.switch label{
     width: 5rem;
     height: 2.5rem;
     background-color: var(--main-color-active);
@@ -110,22 +125,26 @@ body {
     align-items: center;
     margin: 0 auto;
     cursor: pointer;
+    justify-content: flex-start;
+    transition: all .5s ease;
 }
 
-.switch-btn .toggler{
+.switch .toggler{
+    background-color: var(--main-color-active-text);
     margin: 0 .15rem;
     width: 2.2rem;
     height: 2.2rem;
     border-radius: 50%;
-    background-color: var(--main-color-text);
-    color: var(--main-color-active-text);
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    transition: all .5s ease;
 }
 
-.switch-btn.active{
+.switch input:checked ~ label{
     justify-content: flex-end;
+    transition: all .5s ease;
 }
 
 /* hover de la sidebar */
