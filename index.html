@@ -5,50 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.plot.ly/plotly-2.24.1.min.js" charset="utf-8"></script>
 </head>
 
 <body>
 
     <div class="sidenav">
         <div class="logo">
-                <img src="media/Logo.svg" alt="Logo">
-                <h1>Lokalization</h1>
+            <img src="media/Logo.svg" alt="Logo">
+            <h1>LOKALIZATION</h1>
         </div>
-        <button class="dropdown-btn">Dropdown
-            <i class="fa fa-caret-down"></i>
+        <hr>
+        <button class="dropdown-btn">
+            <i class="fa fa-cubes"></i>Metodos<i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-container">
-            <a href="#">metodo 1</a>
+            <a href="#">Multilateracion</a>
             <a href="#">metodo 2</a>
             <a href="#">metodo 3</a>
         </div>
         <hr>
-        <button class="dropdown-btn">Dropdown 2
-            <i class="fa fa-caret-down"></i>
+        <button class="dropdown-btn">
+            <i class="fa fa-gears"></i>Ajustes<i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-container">
-            <div class="form-row">
-                <p>
-                  <label for="coord.X">
-                    <span>X :</span>
-                  </label>
-                  <input type="coord.X" id="X" name="X">
-                </p>
-                <p>
-                  <label for="coord.Y">
-                    <span>Y :</span>
-                  </label>
-                  <input type="coord.Y" id="Y" name="Y">
-                </p>
-              </div>
+            <p>
+                <label for="mail">
+                  <Span>X</Span>
+                  <strong><abbr title="required">:</abbr></strong>
+                </label>
+                <input type="email" id="mail" name="usermail">
+              </p>
+              <p>
+                <label for="mail">
+                  <Span>Y</Span>
+                  <strong><abbr title="required">:</abbr></strong>
+                </label>
+                <input type="email" id="mail" name="usermail">
+              </p>
+              <p>
+                <label for="mail">
+                  <Span>Z</Span>
+                  <strong><abbr title="required">:</abbr></strong>
+                </label>
+                <input type="email" id="mail" name="usermail">
+              </p>
         </div>
+        <hr>
     </div>
 
     <div class="main">
         <h2>Mapa Cartesiano</h2>
-        <div class="graphic"></div>
-        <p class="coordx"></p>
-        <p class="coordy"></p>
+        <div class="graphic" id="graph"></div>
+        <p class="coord">x estimada: 1.2345m</p>
+        <p class="coord">y estimada: 2.3434m</p>
+        <p class="coord">z estimada: 6.2732m</p>
     </div>
 
     <script>
@@ -58,7 +69,7 @@
 
         for (i = 0; i < dropdown.length; i++) {
             dropdown[i].addEventListener("click", function () {
-                this.classList.toggle("active");
+                this.classList.toggle("active-nav");
                 var dropdownContent = this.nextElementSibling;
                 if (dropdownContent.style.display === "block") {
                     dropdownContent.style.display = "none";
@@ -67,6 +78,25 @@
                 }
             });
         }
+    </script>
+
+    <script>
+        TESTER = document.getElementById('graph');
+        Plotly.newPlot(TESTER, [{
+            x: [0, 7.507, 0],
+            y: [0, 0, 3.94],
+            z: [0,0,0],
+            type: 'scatter3d',
+            mode: 'markers+text',
+            text: ['B-0', 'B-1', 'B-2'],
+            textposition: 'top center',
+            textfont: {
+                family: 'Raleway, sans-serif'
+            },
+            marker: { size: 12 }
+        }], { margin: { t: 0 } }, { responsive: true });
+
+
     </script>
 
 </body>
