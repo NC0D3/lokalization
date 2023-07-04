@@ -168,7 +168,19 @@
 
     <script>
         TESTER = document.getElementById('graph');
-        Plotly.newPlot(TESTER, [{x: [1, 2, 3, 4, 5],y: [1, 2, 4, 8, 16]}], {margin: { t: 0 }}, { responsive: true });
+        Plotly.newPlot(TESTER, [{
+            x: [0, 7.507, 0],
+            y: [0, 0, 3.94],
+            z: [0,0,0],
+            type: 'scatter3d',
+            mode: 'markers+text',
+            text: ['B-0', 'B-1', 'B-2'],
+            textposition: 'top center',
+            textfont: {
+                family: 'Raleway, sans-serif'
+            },
+            marker: { size: 12 }
+        }], { margin: { t: 0 } }, { responsive: true });
 
 
     </script>
