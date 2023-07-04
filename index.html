@@ -138,6 +138,10 @@
             <div class="spacer"></div>
         </div>
         <hr>
+        <div class="switch-btn" id="switch">
+            <div class="toggler"><i class="fa fa-area-chart"></i></div>
+        </div>
+        <hr>
     </div>
 
     <div class="main">
@@ -190,6 +194,20 @@
             });
 
 
+    </script>
+
+    <script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var switchbtn = document.getElementById("switch");
+            switchbtn.addEventListener("click", function () {
+                this.classList.toggle("active");
+                /*var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }*/
+            },false);
     </script>
 
 </body>
