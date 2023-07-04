@@ -125,7 +125,7 @@ body {
     align-items: center;
     margin: 0 auto;
     cursor: pointer;
-    justify-content: flex-start;
+    justify-content: left;
     transition: all .5s ease;
 }
 
@@ -143,7 +143,7 @@ body {
 }
 
 .switch input:checked ~ label{
-    justify-content: flex-end;
+    justify-content: right;
     transition: all .5s ease;
 }
 

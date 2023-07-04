@@ -6,6 +6,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.plot.ly/plotly-2.24.1.min.js" charset="utf-8"></script>
+    <script>
+        var a = 0;
+        var config = {
+            x: [0, 7.507, 0],
+            y: [0, 0, 3.94],
+            mode: 'markers+text',
+            text: ['B-0', 'B-1', 'B-2'],
+            textposition: 'top center',
+            textfont: {
+                family: 'Raleway, sans-serif'
+            },
+            marker: { size: 12 }
+        }
+    </script>
 </head>
 
 <body>
@@ -17,7 +31,7 @@
         </div>
         <hr>
         <button class="dropdown-btn">
-            <i class="fa fa-cubes"></i>Metodos<i class="fa fa-caret-down"></i>
+            <i class="	fa fa-code-fork"></i>Metodos<i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-container">
             <a href="#">Multilateracion</a>
@@ -179,19 +193,7 @@
     <script>
         TESTER = document.getElementById('graph');
         Plotly.newPlot(TESTER,
-            [{
-                x: [0, 7.507, 0],
-                y: [0, 0, 3.94],
-                z: [0, 0, 0],
-                type: 'scatter3d',
-                mode: 'markers+text',
-                text: ['B-0', 'B-1', 'B-2'],
-                textposition: 'top center',
-                textfont: {
-                    family: 'Raleway, sans-serif'
-                },
-                marker: { size: 12 }
-            }],
+            [config],
             {
                 margin: { t: 0 }
             },
@@ -203,18 +205,20 @@
     </script>
 
     <script>
-        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
         var switchbtn = document.getElementById("switch");
         switchbtn.addEventListener("click", function () {
             this.classList.toggle("active");
             var switchtglr = this.getElementsByClassName("icon");
-            console.log(switchtglr);
-            switchtglr.classList.replace("fa-area-chart","fa-cubes");
-            console.log(switchtglr);
-            if (switchtglr.classList.contains("fa-area-chart")) {
-                switchtglr.classList.replace("fa-area-chart","fa-cubes");
+            if (switchtglr[0].classList.contains("fa-area-chart")) {
+                switchtglr[0].classList.replace("fa-area-chart", "fa-cubes");
+                config.type = 'scatter3d';
+                config.z=[0, 0, 0];
+                Plotly.react('graph', [config]);
             } else {
-                switchtglr.classList.replace("fa-cubes","fa-area-chart");
+                switchtglr[0].classList.replace("fa-cubes", "fa-area-chart");
+                delete config.type;
+                delete config.z;
+                Plotly.react('graph', [config]);
             }
         }, false);
     </script>
