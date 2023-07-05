@@ -250,26 +250,26 @@ body {
     /* Same as the width of the sidenav */
     font-size: 20px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr 6fr 1fr;
 }
 
 .main h2{
     margin: auto 0;
-    grid-column: 1 / 4;
+    grid-column: 1;
     text-align: center;
 }
 
 .main .graphic{
-    grid-column: 1 / 4;
+    grid-column: 1;
     grid-row: 2 / 3;
 }
 
 .main .coord{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    text-align: center;
+    text-align:center;
 }
 
 @media screen and (orientation: portrait) {
@@ -301,7 +301,7 @@ body {
     }
 
     .main .coord{
-        grid-column: 1 / 4;
+        flex-direction:column;
     }
 
 }
